@@ -2,6 +2,7 @@ package com.neusoft.test1;
 
 public class Test {
 	public static void main(String[] args) {
-		System.out.println("hello word");
+		int a=100;
+		System.out.println("hello word"+a);
 	}
 }
