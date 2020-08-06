@@ -1,5 +1,6 @@
 package com.neusoft.School.dao.impl;
 
+import java.awt.Desktop.Action;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -188,7 +189,10 @@ public class teacherDAOimpl extends BaseDAO implements teacherDAO {
 		}
 		return t;
 	}
-
+//	public Action Contrl()
+//	{
+//		return null;
+//	}
 	@Override
 	public List<student> listTeacher_student(int teacherId) {
 		String sql = "select s.Studentid ,s.Studentname,s.StudentClass from student s,stucou sc,course c,teacher t "
