@@ -12,6 +12,7 @@ import com.neusoft.School.po.student;
 import com.neusoft.School.po.teacher;
 import com.neusoft.School.util.BaseDAO;
 
+@SuppressWarnings("unused")
 public class teacherDAOimpl extends BaseDAO implements teacherDAO {
 
 	@Override
@@ -189,10 +190,6 @@ public class teacherDAOimpl extends BaseDAO implements teacherDAO {
 		}
 		return t;
 	}
-//	public Action Contrl()
-//	{
-//		return null;
-//	}
 	@Override
 	public List<student> listTeacher_student(int teacherId) {
 		String sql = "select s.Studentid ,s.Studentname,s.StudentClass from student s,stucou sc,course c,teacher t "
@@ -222,7 +219,4 @@ public class teacherDAOimpl extends BaseDAO implements teacherDAO {
 		}
 		return slist;
 	}
-	
-
-
 }
