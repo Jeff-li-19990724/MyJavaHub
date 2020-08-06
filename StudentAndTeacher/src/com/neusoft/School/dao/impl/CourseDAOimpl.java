@@ -34,7 +34,6 @@ public class CourseDAOimpl extends BaseDAO implements CourseDAO {
 		}
 		return m;
 	}
-
 	@Override
 	public List<course> SelectCourse() {
 		StringBuffer sql = new StringBuffer(
@@ -124,7 +123,7 @@ public class CourseDAOimpl extends BaseDAO implements CourseDAO {
 	}
 	@Override
 	public int updateCourse(course course) {
-		// TODO Auto-generated method stub
+		
 		String sql = "update course set coursename= ?,CourseHour = ? where courseid = ?";
 		PreparedStatement pstmt = null;
 		int count = 0;
@@ -136,13 +135,11 @@ public class CourseDAOimpl extends BaseDAO implements CourseDAO {
 			count = pstmt.executeUpdate();
 		
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}finally{
 			try {
 				close(null, pstmt, null);
 			} catch (SQLException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
@@ -152,7 +149,6 @@ public class CourseDAOimpl extends BaseDAO implements CourseDAO {
 	@SuppressWarnings("resource")
 	@Override
 	public int deleteCourse(int courseId) {
-		// TODO Auto-generated method stub
 		String sql1 = "delete from stucou where courseid = ? ";
 		String sql2 = "delete from course where courseid = ? ";
 		PreparedStatement pstmt = null;
@@ -168,19 +164,16 @@ public class CourseDAOimpl extends BaseDAO implements CourseDAO {
 			count = pstmt.executeUpdate();
 			getConn().commit();
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 			try {
 				getConn().rollback();
 			} catch (SQLException e1) {
-				// TODO Auto-generated catch block
 				e1.printStackTrace();
 			}
 		}finally{
 			try {
 				close(null, pstmt, null);
 			} catch (SQLException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
@@ -203,13 +196,11 @@ public class CourseDAOimpl extends BaseDAO implements CourseDAO {
 				c.setTeacherID(rs.getInt("teacherid"));
 			}
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}finally{
 			try {
 				close(null, pstmt, rs);
 			} catch (SQLException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}

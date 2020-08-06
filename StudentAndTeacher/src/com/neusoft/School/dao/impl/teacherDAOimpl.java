@@ -38,7 +38,6 @@ public class teacherDAOimpl extends BaseDAO implements teacherDAO {
 			try {
 				close(null,getStament() ,getRs());
 			} catch (SQLException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
@@ -88,13 +87,11 @@ public class teacherDAOimpl extends BaseDAO implements teacherDAO {
 					tlist.add(t);
 				}
 			} catch (SQLException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}finally{
 				try {
 					close(null, pstmt, rs);
 				} catch (SQLException e) {
-					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
 			}
@@ -114,13 +111,11 @@ public class teacherDAOimpl extends BaseDAO implements teacherDAO {
 			count = pstmt.executeUpdate();
 			
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}finally{
 			try {
 				close(null, pstmt, null);
 			} catch (SQLException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
@@ -183,13 +178,11 @@ public class teacherDAOimpl extends BaseDAO implements teacherDAO {
 				
 			}
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}finally{
 			try {
 				close(null, pstmt, rs);
 			} catch (SQLException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
@@ -215,13 +208,11 @@ public class teacherDAOimpl extends BaseDAO implements teacherDAO {
 				slist.add(student);
 			}
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}finally{
 			try {
 				close(null, pstmt, rs);
 			} catch (SQLException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}

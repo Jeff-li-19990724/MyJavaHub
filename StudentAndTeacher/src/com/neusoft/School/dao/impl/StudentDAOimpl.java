@@ -37,7 +37,6 @@ public class StudentDAOimpl extends BaseDAO implements StudentDAO {
 			try {
 				close(null,getStament() ,getRs());
 			} catch (SQLException e) {
-				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
 		}
